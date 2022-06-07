@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <title>Jogo da forca</title>
+</head>
+
+<body>
+    <header id="header">
+        <p>
+            Challeng Alura - Jogo da forca
+        </p>
+      
+    
+       
+    </header>
+ 
+    <main id="main">
+
+       
+       
+
+
+
+
+        <div class="container">
+          
+           
+       
+            <div id="img">
+                
+                <img src="assets/img/forca.png" alt="forca" width="150px" >
+               
+    
+            </div>
+
+            <div id="palavraSecreta">
+                <div class="letra"></div>
+                <div class="letra"></div>
+                <div class="letra"></div>
+                <div class="letra"></div>
+                <div class="letra"></div>
+                <div class="letra"></div>
+
+            </div>
+
+         
+    
+    
+            <div class="alfabeto">
+                <div id="alfabeto1">
+                    <button class="selecionar" id="Q" onclick="letraMarcada('Q')">Q</button>
+                    <button class="selecionar" id ="W" onclick="letraMarcada('W')">W</button>
+                    <button class="selecionar" id="E" onclick="letraMarcada('E')">E</button>
+                    <button class="selecionar" id="R" onclick="letraMarcada('R')">R</button>
+                    <button class="selecionar" id="T" onclick="letraMarcada('T')">T</button>
+                    <button class="selecionar" id="Y" onclick="letraMarcada('Y')">Y</button>
+                    <button class="selecionar" id="U" onclick="letraMarcada('U')">U</button>
+                    <button class="selecionar" id="I" onclick="letraMarcada('I')">I</button>
+                    <button class="selecionar" id="O" onclick="letraMarcada('O')">O</button>
+                    <button class="selecionar" id="P" onclick="letraMarcada('P')">P</button>
+                </div>
+                <div id="afbtDois" >
+                    <button class="selecionar" id="A" onclick="letraMarcada('A')">A</button>
+                    <button class="selecionar" id="S" onclick="letraMarcada('S')">S</button>
+                    <button class="selecionar" id="D"  onclick="letraMarcada('D')">D</button>
+                    <button class="selecionar" id="F" onclick="letraMarcada('F')">F</button>
+                    <button class="selecionar" id="G" onclick="letraMarcada('G')">G</button>
+                    <button class="selecionar" id="H" onclick="letraMarcada('H')">H</button>
+                    <button class="selecionar" id="J" onclick="letraMarcada('J')">J</button>
+                    <button class="selecionar" id="K" onclick="letraMarcada('K')">K</button>
+                    <button class="selecionar" id="L" onclick="letraMarcada('L')">L</button>
+                    <button class="selecionar" id="Ç" onclick="letraMarcada('Ç')">Ç</button>
+                </div>
+                <div  id="afbtTres" >
+                    <button class="selecionar" id="Z" onclick="letraMarcada('Z')">Z</button>
+                    <button class="selecionar" id="X" onclick="letraMarcada('X')">X</button>
+                    <button class="selecionar" id="C" onclick="letraMarcada('C')">C</button>
+                    <button class="selecionar" id="V" onclick="letraMarcada('V')">V</button>
+                    <button class="nvPalavra" id="nvPalavra">Nova palavra</button>
+                    <button class="selecionar" id="B" onclick="letraMarcada('B')">B</button>
+                    <button class="selecionar" id="N" onclick="letraMarcada('N')">N</button>
+                    <button class="selecionar" id="M" onclick="letraMarcada('M')">M</button>
+                
+                </div>
+            </div>
+
+             <div id="dica">
+                <p>Dica 💡</p>
+            </div>
+    
+
+            <div id="btsJogo">
+           
+                 <button class="nvJogo" id="nvJogo">Novo Jogo</button> 
+                 <button class="desistir" id="desistir">Desistir</button>
+          
+        
+            </div>
+        
+    
+    </main>
+  <footer id="footer">
+
+  </footer>
+</body>
+
+    <script src="assets/javaScript.js"></script>
+
+</html>
