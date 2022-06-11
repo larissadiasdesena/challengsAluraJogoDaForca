@@ -5,11 +5,12 @@
 body {
 
   width: 100%;
-  height: 150vh;
- box-sizing: border-box;
+  height: 100vh;
+  box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-  background: linear-gradient(to bottom,  rgb(70, 188, 206) 30%, #8adae3 70%);
+  background: url("img/img.jpg");
+  background-size: contain;
   display: flex;
   flex-direction: column; 
   display: grid;
@@ -26,8 +27,11 @@ body {
     grid-area: header;
     font-size: larger;
     font-family:'Itim';
-    margin: 5px 5px;
-  
+    display: flex;
+    
+    
+ 
+   
  
     
 }
@@ -37,7 +41,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-  
+    
+   
     flex-direction: column; 
   
     
@@ -47,10 +52,12 @@ body {
 
 #footer {
     grid-area: footer;
-    
     text-align: center;
     font-size: larger ;
-    background: #8adae3;
+    background: linear-gradient(to bottom,  rgb(70, 188, 206) 30%, #8adae3 70%);
+    
+    
+    
    
     
   
@@ -67,15 +74,23 @@ body {
 }
 
 /*img da forca*/
-#img {
+#containerForca {
  
 
-  align-items: center;
-  justify-content: center;
   margin: 30px 2px ;
-  
- 
- 
+  position: relative;
+}
+
+#boneco {
+  display: none;
+  position: absolute;
+  width: 100px;
+  top: 52px;
+  left: 85px;
+}
+
+#containerForca.mostrar #boneco {
+  display: block;
 }
 
 /* Dica*/
@@ -83,8 +98,6 @@ body {
 #dica {
   font-size: 25px;
   margin-top: 50px;
- 
-
 }
 
 /* campo da palavra*/
@@ -306,7 +319,3 @@ body {
   font-weight:bold;
   color :#ecf2f5;
 }
-
-
-
-
