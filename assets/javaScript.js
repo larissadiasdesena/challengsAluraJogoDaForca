@@ -12,13 +12,14 @@ var caminhoImagem = ["cabeca.png", "corpo.png", "braco1.png", "braco2.png", "per
 
 var novoJogo = document.querySelector("#nvJogo");
 var desistir = document.querySelector("#desistir");
+var nvPalavra = document.querySelector("#nvPalavra");
 
 
 // nome e categoria das palavras que vão ser sorteadas
 const palavrasDaForca = [
   {
     nome: "BRASIL",
-    categoria: "PAIS"
+    categoria: "PAÍS"
   },
 
   {
@@ -46,6 +47,7 @@ const palavrasDaForca = [
     categoria: "OBJETO"
   },
 ];
+
 
 function criarPalavra() {
   let indexPalavra = parseInt(Math.random() * palavrasDaForca.length)
@@ -126,11 +128,29 @@ novoJogo.addEventListener("click", function(){
   
 })
 
+
+nvPalavra.addEventListener("click", function(){
+      
+  window.location.reload()
+  
+})
+
 desistir.addEventListener("click", function(){
   document.getElementById("containerForca").classList.add("mostrar")
   document.getElementById("boneco").src = "assets/img/completo.png"
+  const elemento = document.createElement("p") // criando um elemento filho na div de acordo com o tamanho da palavra
+  elemento.innerHTML = "<p> Que pena, volte sempre.</p>"
+  document.getElementById("mensagem").appendChild(elemento)
+  setTimeout(removeErro, 2000)        
+        
+   
 
 })
+
+function removeErro(){
+  document.getElementById('mensagem').remove()
+}     
+
 
     
 

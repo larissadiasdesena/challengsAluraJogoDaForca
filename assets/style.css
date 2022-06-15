@@ -9,8 +9,8 @@ body {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-  background: url("img/img.jpg");
-  background-size: contain;
+ background: url("img/inho.webp");
+  background-size: 100%;
   display: flex;
   flex-direction: column; 
   display: grid;
@@ -41,7 +41,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
    
     flex-direction: column; 
   
@@ -54,7 +53,7 @@ body {
     grid-area: footer;
     text-align: center;
     font-size: larger ;
-    background: linear-gradient(to bottom,  rgb(70, 188, 206) 30%, #8adae3 70%);
+    
     
     
     
@@ -72,6 +71,16 @@ body {
 
 
 }
+.imagem{
+  position: relative;
+  display: inline;
+  flex-direction: row; 
+  align-items: flex-end;
+  margin-bottom: 1em;
+  margin-top: 2px;
+  margin-bottom: 20%;
+  margin-right: 500px;
+}
 
 /*img da forca*/
 #containerForca {
@@ -84,8 +93,8 @@ body {
 #boneco {
   display: none;
   position: absolute;
-  width: 100px;
-  top: 52px;
+  width: 107px;
+  top: 51px;
   left: 85px;
 }
 
@@ -97,7 +106,8 @@ body {
 
 #dica {
   font-size: 25px;
-  margin-top: 50px;
+  margin-top: 20px;
+  font-family:'Itim';
 }
 
 /* campo da palavra*/
@@ -180,9 +190,9 @@ body {
   border-color:#599bb3;
   font-weight:bold;
   cursor: pointer;
-  background:#06506b;
-  box-shadow: 0px 10px 14px -7px #99afb3;
-  background: linear-gradient(rgb(126, 201, 194), #3DA5D9);
+  background:#054962;
+  box-shadow: 0px 10px 14px -7px #c5dbde;
+  background: linear-gradient(rgb(47, 74, 137), #3d96c3);
 
 }
 
@@ -203,7 +213,7 @@ body {
   cursor: pointer;
   box-shadow: 0px 10px 14px -7px #000000;
   text-shadow: 0px 1px 0px #3d768a;
-  background: linear-gradient(rgb(126, 201, 194), #3DA5D9);
+  background: linear-gradient(rgb(47, 74, 137), #3d96c3);
   cursor: pointer;
 
 }
@@ -256,6 +266,16 @@ body {
         
      
     }
+
+    @media(max-width: 400px){
+      body{
+          grid-template-rows: 80px 1fr 150px;
+      }
+  
+      #main {
+          min-height: calc(100vh - 230px);
+      }  
+  }
 
     .desistir:hover, .nvJogo:hover, .nvPalavra:hover, .selecionar:hover {
       background: none; 
@@ -318,4 +338,17 @@ body {
   border-width:1px;
   font-weight:bold;
   color :#ecf2f5;
+}
+#mensagem{
+  position: relative; 
+    min-height: 6%;
+   
+    font-size: 18px;
+    font-style: oblique;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    padding: 8px;
+    animation: Erro 1s ease-in-out;
+    zoom: 0;
 }
